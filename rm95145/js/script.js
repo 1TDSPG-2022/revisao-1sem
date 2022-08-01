@@ -7,19 +7,39 @@
 //console.log("Olá Mundo!");
 
 //Hoysting
-console.log(nome + " tem " + " anos ");
+//console.log(nome + " tem " + " anos ");
 //Interpolação
-console.log(`${nome} tem anos`);
+//console.log(`${nome} tem anos`);
 
 //Declaraçõ de variáveis
 
 //Escope de variáveis
 //Global
-var nome = "João";
+//var nome = "João";
 //Local
-let idade = 20;
+//let idade = 20;
 //Constante
-const nacionalidade = "Brasileiro";
+//const nacionalidade = "Brasileiro";
+
+//Objeto literal
+const usuario = {
+
+    nome:"",
+    idade:0,
+    nacionalidade:"",
+
+    cadastrar : function(nome, idade, nacionalidade){
+        this.nome = nome
+        this.idade = idade
+        this.nacionalidade = nacionalidade
+        console.log(`${this.nome} está cadastrado`);
+    }
+}
+
+usuario.cadastrar("João", 20, "Brasileiro");
+console.log(usuario);
+
+
 
 
 
