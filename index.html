@@ -11,19 +11,25 @@
 <body>
     <div>
         <form action="index.html" method="POST">
-            <fieldset>
+            <fieldset id="form">
                 <legend>CADASTRO DE TAREFA</legend>
-                <div>
+                <div class="form-control success">
                     <label for="nmTaskId">Tarefa</label>
                     <input type="text" name="dsTask" id="nmTaskId" placeholder="Tarefa">
+
+                    <small>Error</small>
                 </div>
-                <div>
+                <div class="form.control error">
                     <label for="dtTaskId">Data de realização</label>
                     <input type="date" name="dtTask" id="dtTaskId">
+
+                    <small>Error</small>
                 </div>
                 <div>
                     <label for="">Descrição</label>
                     <input type="text" name="descTask" id="descTaskId" placeholder="Descrição">
+
+                    <small>Error</small>
                 </div>
                 <div>
                     <button type="submit" id="btnEnviar">ENVIAR</button>
@@ -31,5 +37,7 @@
             </fieldset>
         </form>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
