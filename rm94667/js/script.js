@@ -1,18 +1,29 @@
 //console.log("Olá Mundo!")
 
-const usuario = {
-    nome : "",
-    idade : 0,
-    nacionalidade : "",
+const tarefas = {
+    nmTask : "",
+    dtTask : "",
+    descTask : "",
 
-    cadastrar : function(nome, idade, nacionalidade){
-        this.nome = nome;
-        this.idade = idade;
-        this.nacionalidade = nacionalidade
-        console.log('${this.nome} está cadastrado');
+    cadastrar : function(nmTask, dtTask, descTask){
+        this.nmTask = nmTask
+        this.dtTask = dtTask;
+        this.descTask = descTask
+        console.log('${this.nmTask} está cadastrado');
     }
 }
 
-usuario.cadastrar("Bueno", 18, "Brasileiro");
-console.log(usuario);
+tarefas.cadastrar("Bueno", "Passear com os Dogs!", "Brasileiro");
+console.log(tarefas);
 
+const btn = document.getElementById("btnEnviar")
+
+btn.addEventListener("click", function(){
+    let inputTask = document.querySelectorAll("input[type=text], input[type=date]")
+    
+    for(let x = 0; x < inputTask.length ; x ++){
+        tarefas.cadastrar(inputTask[0].value, inputTask[1].value, inputTask[2].value)
+        console.log(tarefas) 
+    }
+
+})
