@@ -14,8 +14,7 @@ body {
 section{
     display: grid;
     place-items: center;
-    margin-top: 2em;
-    height: 600px;
+    height: 100vh;
 
 }
 section form{ 
