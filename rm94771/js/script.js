@@ -21,18 +21,34 @@
 // console.log(`${nome} tem ${idade} anos`)
 
 // Objeto literal
-const usuario = {
-  nome: '',
-  idade: 0,
-  nacionalidade: '',
+const tarefas = {
+  nmTask: '',
+  dtTask: 0,
+  dsTask: '',
 
-  cadastrar: function (nome, idade, nacionalidade) {
-    this.nome = nome
-    this.idade = idade
-    this.nacionalidade = nacionalidade
-    console.log(`${this.nome} está cadastrado`)
+  cadastrar: function (nmTask, dtTask, dsTask) {
+    this.nmTask = nmTask
+    this.dtTask = dtTask
+    this.dsTask = dsTask
+    console.log(`${this.nmTask} está cadastrada`)
   }
 }
 
-usuario.cadastrar('João', 20, 'Brasileiro')
-console.log(usuario)
+tarefas.cadastrar('João', '2022-05-08', 'Passear comm os Dogs!')
+console.log(tarefas)
+
+const btn = document.getElementById('btnEnviar')
+
+btn.addEventListener('click', function () {
+  let inputTask = document.querySelectorAll(
+    'input[type=text], input[type=date]'
+  )
+
+  let count = 0
+  for (let x = 0; x < inputTask.length; x++) {
+    if (inputTask[x].value == '') {
+      count++
+    }
+  }
+  count > 0 ? alert('Preencha todos os campos') : ''
+})
