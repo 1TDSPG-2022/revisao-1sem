@@ -46,14 +46,13 @@
 const botaoSubmit = document.getElementById("btnEnviar")
 const eleTarefa = document.getElementById("objTarefa")
 
-
-let tarefa = {
+const tarefa = {
     nmTask:"",
     dtTask:"", 
     nmTaskDesc:"",
     validaCampo: () => {
         console.log("Validando campos");
-        const campos = document.querySelectorAll("input[type='text'],input[type='date']")
+        let campos = document.querySelectorAll("input[type='text'],input[type='date']")
         for(let x = 0; x < campos.length ; x++){
             if(campos[x].value == ''){
                 alert('O CAMPO ' + campos[x].name + ' não foi preenchido!')
@@ -67,6 +66,5 @@ let tarefa = {
 }
 
 eleTarefa.textContent = JSON.stringify(tarefa, null, " ");
-
-//ATRELAR UM EVENTO AO BOTÃO CAPTURADO
 botaoSubmit.addEventListener("click", tarefa.validaCampo); 
+
