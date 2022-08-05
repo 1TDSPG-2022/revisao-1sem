@@ -22,22 +22,27 @@
 //const nacionalidade = "Brasileiro";
 
 //Objeto literal 
-const usuario = {
+const tarefas = {
 
-    nome:'',
-    idade:'',
-    nacionalidade:'',
+    nmTask:"",
+    dtTask:"",
+    descTask:"",
 
-    cadastrar : function(nome, idade, nacionalidade){
-        this.nome = 'Luis'
-        this.idade = 20
-        this.nacionalidade = nacionalidade
-        console.log(`${this.nome} esta cadastrado`);
+    cadastrar : function(nmTask, dtTask, descTask){
+        this.nome = nmTask
+        this.idade = dtTask
+        this.nacionalidade = descTask
+        console.log(`${this.nmTask} esta cadastrada`);
     }
 }
 
-usuario.cadastrar("Joao", 20, "Brasileiro")
-
+tarefas.cadastrar("Joao", 20, "Brasileiro")
 console.log(usuario);
 
-//
+const btn = document.getElementById("btnEnviar")
+
+btn.addEventListener("click", function(){
+    let inputTask = document.querySelectorAll("input[type=text], input[type=date]")    
+    tarefas.cadastrar(inputTask[0].value, inputTask[1].value, inputTask[2].value)
+})
+
