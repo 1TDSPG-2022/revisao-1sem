@@ -5,30 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/script.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
     <title>Revisão</title>
 </head>
 <body>
     <section>
         <form action="index.html" method="POST">
-            <fieldset>
-
+            <p>Bem-Vindo(a)! 👋</p>
+            <fieldset class="formluario">
                 <legend>Cadastros de Tarefas</legend>
                 <div>
-                    <label for="">Tarefa</label>
-                    <input type="text" name="nmTask" id="nmTaskId" placeholder="Tarefa">
+                    <label for="">Tarefa</label id='a'>
+                    <input type="text" name="Tarefas" id="nmTaskId" placeholder="Tarefa">
                 </div>
                 <div>
                     <label for="">Data de Realização</label>
-                    <input type="date" name="dtTask" id="dtTaskId">
+                    <input type="date" name="Data" id="dtTaskId">
                 </div>
                 <div>
                     <label for="">Descrição</label>
-                    <input type="text" name="descTask" id="descTaskId" placeholder="Descrição">
+                    <input type="text" name="Descrição" id="descTaskId" placeholder="Descrição">
                 </div>
                 <div>
-                    <button type="submit" id="btnEnviar">ENVIAR</button>
+                    <a href="#">
+                        <button type="button" id="btnEnviar">ENVIAR</button>
+                    </a>
                 </div>
-                
+
             </fieldset>
         </form>
     </section>

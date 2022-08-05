@@ -18,18 +18,15 @@ const nacionality = 'Brasileiro';
 console.log(`${nome} tem ${oldyear} anos.`)
 */
 
-const user = {
-    name: '',
-    oldyear: 0,
-    nacionality: '',
+const campos = document.querySelectorAll('input[type="text"], input[type="date"]');
+const btnEnv = document.querySelector('#btnEnviar');
 
-    sing_up: (name, oldyear, nacionality) => {
-        this.name = name;
-        this.oldyear = oldyear;
-        this.nacionality = nacionality;
-        console.log(`${this.name} está cadastrado!`);
+btnEnv.addEventListener('click', ()=> {
+    for(let i = 0; i < campos.length; i++){
+        if(campos[i].value == '') {
+            alert(`O Campo ${campos[i].name} NÃO foi preenchido!`);
+            return;
+        }
     }
-};
-
-user.sing_up('vitu', 18, 'Brasileiro');
-console.log(user);
+    alert('Formulário enviado com sucesso!');
+})

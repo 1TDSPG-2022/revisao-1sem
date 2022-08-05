@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'lato', sans-serif;
+}
+
+body {
+    background-image: url('../img/bgg.png');
+}
+
+section{
+    display: grid;
+    place-items: center;
+    margin-top: 8em;
+    height: 600px;
+
+}
+section form{ 
+    background-color: #fff;
+    box-shadow: 1px 2px 10px #bebebe;
+    width: 400px;
+    padding-top: 40px;
+    display: grid;
+    place-items: center;
+}
+section form p{
+    margin-bottom: 10px;
+}
+.formluario {
+    border: none;
+    padding: 30px;
+}
+.formluario legend {
+    font-size: 25px;
+    font-weight: bold;
+}
+.formluario div {
+    padding: 15px 0px;
+}
+.formluario div label {
+    font-size: 20px;
+    color:#8a8a8a;
+    display: block;
+    margin-bottom: 10px;
+}
+.formluario div input {
+    padding-left: 15px;
+    width: 250px;
+    height: 40px;
+    border: .4px solid black;
+    border-radius: 5px;
+}
+#btnEnviar {
+    color: #fff;
+    background-color: #303ea9;
+    width: 250px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    
+}
+#btnEnviar:hover {
+    transition: all .2s ease-in-out;
+    background-color: #4659e3;
+}
+#btnEnviar:active {
+    background-color: #3a48b1;
+}
+
+
+/*Medias Querys*/
+
+@media only screen and (max-width: 430px) {
+    section form {
+        width: 300px;
+    }
+}
+
+/*Medias Querys*/
