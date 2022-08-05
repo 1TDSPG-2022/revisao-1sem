@@ -1,0 +1,45 @@
+
+form{
+    font-family: sans-serif;
+    width: 300px;
+}
+fieldset div{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+fieldset div label{
+    font-weight: bold;
+    font-size: 12px;
+}
+fieldset div input{
+    padding: 5px;
+}
+p{
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: darkgrey;
+    margin: 0;
+}
+.object{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+}
+
+.object code{
+    padding: 5px;
+    background-color: rgb(60, 64, 67);
+    border-radius: 5px;
+}
+
+fieldset{
+    border-radius: 5px;
+}
+
+.wrap{
+    display: flex;
+}

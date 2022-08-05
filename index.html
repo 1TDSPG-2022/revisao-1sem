@@ -5,31 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revisão 1°SEM</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/main.js" defer></script>
-</head>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
 <body>
-    <div>
+    <div class="wrap">
         <form action="index.html" method="post">
             <fieldset>
-                <legend>CADASTRO DA TAREFA</legend>
+                <legend>Cadastro da Tarefa</legend>
                 <div>
                     <label for="nmTaskId">Tarefa:</label>
-                    <input type="text" name="nmTaskId" id="nmTaskId" placeholder="Digite a tarefa">
+                    <input type="text" name="nmTask" id="nmTaskId" placeholder="Digite a tarefa">
                 </div>
                 <div>
                     <label for="dtTaskId">Data:</label>
-                    <input type="date" name="dtTaskId" id="dtTaskId">
+                    <input type="date" name="dtTask" id="dtTaskId">
                 </div>
                 <div>
                     <label for="nmTaskDesc">Descrição:</label>
-                    <input type="text" name="nmTaskDesc" id="nmTaskDesc" placeholder="Digite a descrição">
+                    <input type="text" name="nmTaskDesc" id="nmTaskDescId" placeholder="Digite a descrição">
                 </div>
                 <div>
-                    <input type="submit" value="Cadastrar">
+                    <input type="button" id="btnEnviar" value="Enviar">
                 </div>
             </fieldset>
         </form>
+        <div class="object">
+            <p>Objeto literal</p>
+            <code id="objTarefa">...</code>
+        </div>
     </div>
 </body>
 </html>
