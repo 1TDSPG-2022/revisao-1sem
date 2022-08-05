@@ -24,21 +24,31 @@
 //const nacionalidade = "Brasileiro";
 
 //Objeto literal
-const usuario = {
-    nome:"",
-    idade:0,
-    nacionaliadade:"",
+const tarefas = {
+    nmTask:"",
+    dtTask:0,
+    descTask:"",
 
-    cadastrar : function(nome, idade, nacionaliadade){
-        this.nome = nome
-        this.idade = idade
-        this.nacionaliadade = nacionaliadade
-        console.log(`${this.nome} está cadastrado`);
+    cadastrar : function(nmTask, dtTask, descTask){
+        this.nmTask = nmTask
+        this.dtTask = dtTask
+        this.descTask = descTask
+        console.log(`${this.nmTask} está cadastrada`);
         
     }
 }
 
-usuario.cadastrar("João", 20, "Brasileiro");
-console.log(usuario);
+tarefas.cadastrar("João", "Passear com os Dogs!", "Brasileiro");
+console.log(tarefas);
 
+const btn = document.getElementById("btnenviar")
 
+btn.addEventListener("click", function(){
+    let inputTask = document.querySelectorAll("input{type=text},input{type=date}")
+
+    tarefas.cadastrar(inputTask[0].value, inputTask[1].value, inputtask[2].value)
+    console.log(tarefas)
+    
+    
+})
+//dentro do parenteses pode passr parametros na function
